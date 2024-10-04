@@ -21,3 +21,9 @@ server.listen(3000, () => {
 });
 
 const fs = require("fs");
+
+// Reading a file
+fs.readFile("example.txt", "utf8", (err, data) => {
+  if (err) throw err;
+  console.log("File content:", data);
+});
