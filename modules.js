@@ -27,3 +27,10 @@ fs.readFile("example.txt", "utf8", (err, data) => {
   if (err) throw err;
   console.log("File content:", data);
 });
+
+// Writing to a file
+const content = "This is a new file content!";
+fs.writeFile("newfile.txt", content, (err) => {
+  if (err) throw err;
+  console.log("File has been written.");
+});
