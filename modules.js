@@ -71,5 +71,11 @@ Asynchronous processing is what allows Node.js to handle many operations at once
 
 Callbacks: The oldest method of handling asynchronous code in Node.js is using callbacks. For example:
 
+const fs = require('fs');
+
+fs.readFile('file.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
 
 */
