@@ -50,6 +50,12 @@ Event-Driven: Node.js operates on an event-driven architecture, where tasks are 
 The Event Loop
 At the heart of Node.js is the Event Loop. The Event Loop is what makes Node.js non-blocking and asynchronous. Here’s how it works:
 
+Call Stack: This is where all your code is executed. Every time a function is called, it’s pushed onto the stack. When the function returns, it's popped off the stack.
+
+Event Queue (or Message Queue): When asynchronous functions (like file system operations or network requests) complete, they don’t return the result immediately. Instead, they are placed into the event queue. The event loop picks up tasks from the queue and processes them when the call stack is empty.
+
+Libuv: Libuv is a C library that Node.js uses to handle asynchronous operations. It delegates work to the system’s thread pool or kernel and helps interface with lower-level system calls.
+
 Phases of the Event Loop:
 
 Timers: The first phase, where callbacks scheduled by setTimeout() and setInterval() are executed.
