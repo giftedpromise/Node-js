@@ -13,3 +13,9 @@ If your application doesn’t handle these errors properly, it may crash or beha
 Common Error Types in Node.js
 Synchronous Errors: These errors occur during the execution of your code, typically in blocking functions. For example, a typo in a variable name can throw an error immediately.
 */
+
+try {
+  const result = someUndefinedFunction(); // This will throw an error
+} catch (error) {
+  console.error("An error occurred:", error.message);
+}
