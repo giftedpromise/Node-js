@@ -21,14 +21,6 @@ try {
 }
 
 /*
-Asynchronous Errors: These occur in asynchronous operations, such as reading files or making HTTP requests. Node.js typically uses callback functions to handle these errors
+Asynchronous Errors: These occur in asynchronous operations, such as reading files or making HTTP requests. 
+Node.js typically uses callback functions to handle these errors
 */
-
-const fs = require("fs");
-
-fs.readFile("nonexistent-file.txt", (err, data) => {
-  if (err) {
-    return console.error("Error reading file:", err.message);
-  }
-  console.log(data);
-});
